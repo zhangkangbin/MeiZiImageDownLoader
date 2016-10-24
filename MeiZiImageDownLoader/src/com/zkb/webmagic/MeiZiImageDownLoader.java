@@ -37,7 +37,7 @@ public class MeiZiImageDownLoader implements PageProcessor{
     	//同时，我们需要把所有找到的列表页也加到待下载的URL中去：
     
         page.addTargetRequests(url);
-        //得到当前页面所有img scr 里面的路径
+        //得到当前页面所有img scr 里面的路径,使用的是xpath 语法匹配
     	List<String> list = page.getHtml().xpath("//img/@src").all();
     	
    
